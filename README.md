@@ -1,32 +1,32 @@
-# spm-doc
+# xdoc
 
-> A CMD module documentation generator.
-
+一个专为互秀而生的前端文档生成器
 -----
 
 ## Install
 
-Install spm-doc with npm:
+Install xdoc with npm:
 
-    $ npm install spm-doc -g
+    $ npm install xdoc -g
 
 ## Usage
 
+init the documentation: 
+
+    $ xdoc init
+
 Build the documentation:
 
-    $ spm-doc build [options]
+    $ xdoc build [options]
 
-If you have installed [spm2](https://github.com/spmjs/spm2):
-
-    $ spm doc build [options]
 
 Start a server at 127.0.0.1:8000:
 
-    $ spm doc server
+    $ xdoc server
 
 Start a server at 127.0.0.1:8000, watching the source files change:
 
-    $ spm doc watch
+    $ xdoc watch
 
 Publish documentation to spmjs.org:
 
@@ -34,7 +34,7 @@ Publish documentation to spmjs.org:
 
 Clean the _site folder:
 
-    $ spm doc clean
+    $ xdoc clean
 
 ## Themes
 
@@ -42,9 +42,9 @@ The default theme path is `~/.spm/themes`.
 
 Install a theme:
 
-    git clone git://github.com/spmjs/nico-cmd.git ~/.spm/themes/cmd
+    git clone https://github.com/elover/xdoc-theme ~/.spm/themes/cmd
 
-> The default theme [nico-cmd](https://github.com/spmjs/nico-cmd) would be installed when spm-doc is installed.
+> The default theme [xdoc-theme](https://github.com/elover/xdoc-theme) would be installed when spm-doc is installed.
 
 ## How to write a document
 
@@ -52,30 +52,5 @@ Follow the instruction in [nico-cmd](https://github.com/spmjs/nico-cmd).
 
 ## Changelog
 
-### 0.3.2
+### 0.0.1
 
-- fixed missing color in cli
-- fixed #5
-- update nico version
-
-### 0.3.1
-
-- add callback argument
-
-### 0.3.0
-
-- use CMD theme as default theme
-
-### 0.2.8
-
-- remove spm-grunt
-- nico 0.4.4
-
-### 0.2.7
-
-- nico 0.4.3
-
-### 0.2.1
-
-- Fix the sync execute problem.
-- Fix the theme choosing logic.

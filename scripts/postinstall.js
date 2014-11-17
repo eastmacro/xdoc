@@ -19,4 +19,4 @@
 var gitInstall = require('../lib/helper').gitInstall;
 
 // install nico-cmd theme
-gitInstall('git://github.com/spmjs/nico-cmd.git', '~/.spm/themes/cmd');
+gitInstall('https://github.com/elover/xdoc-theme', '~/.spm/themes/xdoc');

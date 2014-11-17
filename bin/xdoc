@@ -8,37 +8,39 @@ commander.usage('[options]');
 commander.version(require('../package').version);
 
 commander
-  .option('-s, --source <spmjs>', 'source for publishing')
-  .option('-p, --port <8000>', 'local server port')
-  .option('-f --force', 'force build without cache')
-  .option('-v --verbose', 'show more logging')
-  .option('-q --quiet', 'show less logging')
-  .option('clean', 'clean _site folder')
-  .option('build', 'build documentation')
-  .option('server', 'start a server for documentation')
-  .option('watch', 'start a server of watching source')
-  .option('publish', 'publish documentation for public');
+    .option('-s, --source <spmjs>', 'source for publishing')
+    .option('-p, --port <8000>', 'local server port')
+    .option('-f --force', 'force build without cache')
+    .option('-v --verbose', 'show more logging')
+    .option('-q --quiet', 'show less logging')
+    .option('init','初始化配置文件')
+    .option('clean', 'clean _site folder')
+    .option('build', 'build documentation')
+    .option('server', 'start a server for documentation')
+    .option('watch', 'start a server of watching source')
+    .option('publish', 'publish documentation for public');
 
-commander.on('--help', function() {
-  console.log();
-  console.log('  Examples:'.bold.blue);
-  console.log();
-  console.log('    $ xdoc');
-  console.log('    $ xdoc clean');
-  console.log('    $ xdoc build');
-  console.log('    $ xdoc build -f');
-  console.log('    $ xdoc server');
-  console.log('    $ xdoc watch');
-  console.log('    $ xdoc watch --port 8080');
-  console.log('    $ xdoc publish');
-  console.log('    $ xdoc publish -s alipay');
+commander.on('--help', function () {
+    console.log();
+    console.log('  Examples:'.bold.blue);
+    console.log();
+    console.log('    $ xdoc');
+    console.log('    $ xdoc init');
+    console.log('    $ xdoc clean');
+    console.log('    $ xdoc build');
+    console.log('    $ xdoc build -f');
+    console.log('    $ xdoc server');
+    console.log('    $ xdoc watch');
+    console.log('    $ xdoc watch --port 8080');
+    console.log('    $ xdoc publish');
+    console.log('    $ xdoc publish -s alipay');
 });
 
 commander.parse(process.argv);
 
 if (!process.argv[2]) {
-  commander.help();
-  console.log();
+    commander.help();
+    console.log();
 }
 
 console.log();
