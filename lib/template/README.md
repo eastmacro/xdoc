@@ -7,9 +7,6 @@
 
 ## Install
 
-####依赖模块
-
-
 ```
 grunt 配置 xlib/<%= name %>
 
