@@ -4,17 +4,22 @@
 
 <%= description %>
 
+
 ## Install
 
+####依赖模块
+
+
 ```
-$ spm install <%= name %> --save
+grunt 配置 xlib/<%= name %>
+
 ```
 
 ## Usage
 
 ```js
-var <%= varName %> = require('<%= name %>');
-// use <%= varName %>
+var <%= varName %> = X.<%= name %>;
+
 ```
 
 <!-- 多说 -->

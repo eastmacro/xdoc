@@ -1,7 +1,7 @@
 {
     "name": "xdoc",
     "description": "一个超级方便的文档生成工具，为互秀而生",
-    "version": "0.0.6",
+    "version": "0.0.9",
     "homepage": "https://github.com/elover/xdoc",
     "repository": {
         "type": "git",
@@ -27,7 +27,7 @@
         "whoami": "~0.0.3",
         "lodash": "~2.4.1",
         "rimraf": "~2.2.5",
-        "inquirer": "~0.6.0",
+        "inquirer": "~0.6.0"
     },
     "bin": {
         "xdoc": "bin/xdoc"

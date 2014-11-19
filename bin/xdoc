@@ -13,7 +13,7 @@ commander
     .option('-f --force', 'force build without cache')
     .option('-v --verbose', 'show more logging')
     .option('-q --quiet', 'show less logging')
-    .option('init','初始化配置文件')
+    .option('init','init a documentation')
     .option('clean', 'clean _site folder')
     .option('build', 'build documentation')
     .option('server', 'start a server for documentation')
@@ -33,7 +33,7 @@ commander.on('--help', function () {
     console.log('    $ xdoc watch');
     console.log('    $ xdoc watch --port 8080');
     console.log('    $ xdoc publish');
-    console.log('    $ xdoc publish -s alipay');
+    //console.log('    $ xdoc publish -s alipay');
 });
 
 commander.parse(process.argv);
