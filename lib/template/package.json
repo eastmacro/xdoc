@@ -14,7 +14,7 @@
   },
   "licenses": "MIT",
   "spm": {
-    "main": "src/index.js",
+    "main": "src/<%= name %>.js",
     "dependencies": {
     },
     "devDependencies": {
