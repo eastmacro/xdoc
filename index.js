@@ -2,7 +2,7 @@ var path = require('path');
 var spmrc = require('spmrc');
 var init = require('./lib/init');
 var spawn = require('win-spawn');
-var nico = require('nico');
+var nico = require('xnico');
 var DOC_PATH = '_site', pkg;
 
 //try {
@@ -15,7 +15,7 @@ var spmrc = require('spmrc');
 
 module.exports = function (commander, callback) {
 
-    var log = require('nico/lib/sdk/log');
+    var log = require('xnico/lib/sdk/log');
     commander.color = true;
     log.config(commander);
 
