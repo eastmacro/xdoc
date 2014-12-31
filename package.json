@@ -1,7 +1,7 @@
 {
     "name": "xdoc",
     "description": "一个超级方便的文档生成工具，为互秀而生",
-    "version": "0.0.13",
+    "version": "0.0.14",
     "homepage": "https://github.com/elover/xdoc",
     "repository": {
         "type": "git",
