@@ -5,7 +5,12 @@
 ## Normal usage
 
 ````javascript
-var <%= varName %> = X.<%= name %>;
+
+require(["<%= varName %>/<%= version %>/src/<%= varName %>"],function(<%= varName %>){
+
+
+})
+
 ````
 
 
