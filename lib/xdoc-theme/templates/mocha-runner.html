@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <title>{% block title %}{{config.package.name|title}} Mocha Runner{% endblock %}</title>
+    <link href="/static/bower_components/mocha/mocha.css" type="text/css" rel="stylesheet" charset="utf-8">
+  </head>
+  <body>
+  <script src="/static/bower_components/mocha/mocha.js"></script>
+  <script src="/static/bower_components/sinon/sinon-1.12.2.js"></script>
+  <script src="/static/bower_components/expect/index.js"></script>
+  <!--[if lte IE 8]>
+  <!--<script src="{{config.assets_host}}/gallery/sinon/1.6.0/sinon-ie.js"></script>-->
+  <![endif]-->
+  {%- include "snippet/head.html" %}
+    <div id="mocha"></div>
+    <script>
+      requirejs.config({
+        baseUrl: '/widget',
+        map: {
+          '*': {
+            'css': '../static/bower_components/require-css/css' // or whatever the path to require-css is
+          }
+        }
+      });
+
+      (function() {
+        mocha.setup('bdd');
+
+        {%- set specs = spec_files %}
+        var tests = {{specs|json_encode}};
+
+        var specs = [];
+        for (var i = 0; i < tests.length; i++) {
+          specs[i] = './' + tests[i];
+        }
+
+        require(specs, function() {
+          if (window.mochaPhantomJS) {
+            mochaPhantomJS.run()
+          } else {
+            mocha.run()
+          }
+        })
+      }());
+    </script>
+  </body>
+</html>
