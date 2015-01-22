@@ -13,12 +13,10 @@
     "url": ""
   },
   "licenses": "MIT",
-  "spm": {
-    "main": "src/<%= name %>.js",
-    "dependencies": {
-    },
-    "devDependencies": {
-      "expect.js": "0.3.1"
-    }
+  "main": "src/<%= name %>.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "expect.js": "0.3.1"
   }
 }
