@@ -1,42 +1,43 @@
 {
-    "name": "xdoc",
-    "description": "一个超级方便的文档生成工具，为互秀而生",
-    "version": "0.0.16",
-    "homepage": "https://github.com/elover/xdoc",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/elover/xdoc.git"
-    },
-    "bugs": {
-        "url": "https://github.com/elover/xdoc/issues"
-    },
-    "licenses": [
-        {
-            "type": "MIT"
-        }
-    ],
-    "dependencies": {
-        "xnico": "*",
-        "colorful": "~2.1.0",
-        "spmrc": "*",
-        "win-spawn": "~1.1.0",
-        "commander": "~1.1.1",
-        "semver": "~1.1.4",
-        "gulp": "~3.6.2",
-        "gulp-template": "*",
-        "whoami": "~0.0.3",
-        "lodash": "~2.4.1",
-        "rimraf": "~2.2.5",
-        "inquirer": "~0.6.0"
-    },
-    "bin": {
-        "xdoc": "bin/xdoc"
-    },
-    "keywords": [
-        "xdoc"
-    ],
-    "scripts": {
-        "postinstall": "node scripts/postinstall.js",
-        "uninstall": "scripts/uninstall.js"
+  "name": "xdoc",
+  "description": "一个超级方便的文档生成工具，为互秀而生",
+  "version": "0.0.19",
+  "homepage": "https://github.com/elover/xdoc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/elover/xdoc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elover/xdoc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
     }
+  ],
+  "dependencies": {
+    "colorful": "~2.1.0",
+    "commander": "~1.1.1",
+    "file-system": "^2.0.0",
+    "gulp": "~3.6.2",
+    "gulp-template": "*",
+    "inquirer": "~0.6.0",
+    "lodash": "~2.4.1",
+    "rimraf": "~2.2.5",
+    "semver": "~1.1.4",
+    "spmrc": "*",
+    "whoami": "~0.0.3",
+    "win-spawn": "~1.1.0",
+    "xnico": "*"
+  },
+  "bin": {
+    "xdoc": "bin/xdoc"
+  },
+  "keywords": [
+    "xdoc"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "uninstall": "scripts/uninstall.js"
+  }
 }
