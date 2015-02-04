@@ -3,7 +3,7 @@
 <link rel="stylesheet" href=/static/css/site.css>
 <link rel="stylesheet" href=/static/css/solarized.css>
 <script src=/static/js/jquery-1.11.0.js></script>
-<script src=/static/js/handlebars.js></script>
+<!--<script src=/static/js/handlebars.js></script>-->
 <script src=/static/js/require.js></script>
 <!--[if lt IE 9]>
 <script src=/static/js/html5shiv.js></script>
@@ -12,26 +12,7 @@
 {%- set enginefiles = engines %}
 {%- set pkg = config.package %}
 
-<script>
-
-    requirejs.config({
-        baseUrl: '/widget',
-        map: {
-            "*": {
-                "widget/{{pkg.name}}-{{pkg.version}}":"{{pkg.name}}/{{pkg.version}}/src/{{pkg.name}}",
-                {%- for dep in pkg.dependencies %}
-                "widget/{{loop.key}}-{{dep}}":"{{loop.key}}/{{dep}}/src/{{loop.key}}"
-                {%- endfor %}
-            }
-        },
-        paths:{
-            "{{pkg.name}}/{{pkg.version}}/src/{{pkg.name}}":"{{pkg.name}}/{{pkg.version}}/build/{{pkg.name}}",
-            {%- for dep in pkg.dependencies %}
-            "{{loop.key}}/{{dep}}/src/{{loop.key}}":"{{loop.key}}/{{dep}}/build/{{loop.key}}"
-            {%- endfor %}
-        }
-        });
-</script>
+<script type="text/javascript" src="/static/require-config.js"></script>
 
 <!--{%- if enginefiles|length %}-->
 
