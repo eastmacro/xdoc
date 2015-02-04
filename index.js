@@ -4,6 +4,7 @@ var init = require('./lib/init');
 var spawn = require('win-spawn');
 var nico = require('xnico');
 var DOC_PATH = '_site', pkg;
+var build = require('./lib/build');
 
 //try {
 //  var spm = require('spm');
@@ -42,6 +43,10 @@ module.exports = function (commander, callback) {
     }
 
     if (commander.build) {
+
+        //处理依赖打包
+        build();
+
         nico.build(commander, callback);
     }
 

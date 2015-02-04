@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-var file = require('file-system');
 var path = require('path');
 
 //try {
@@ -23,4 +22,4 @@ var gitInstall = require('../lib/helper').gitInstall;
 
 // install nico-cmd theme
 
-gitInstall(path.dirname(__dirname) + '/lib/xdoc-theme/', '~/.spm/themes/xdoc');
+gitInstall(path.dirname(__dirname) + '/lib/xdoc-theme', '~/.spm/themes/xdoc');

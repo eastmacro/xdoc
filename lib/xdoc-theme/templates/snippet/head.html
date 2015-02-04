@@ -1,4 +1,3 @@
-
 <link type="image/x-icon" href=/static/css/favicon.ico rel="icon">
 <link rel="stylesheet" href=/static/css/normalize.css>
 <link rel="stylesheet" href=/static/css/site.css>
@@ -9,13 +8,30 @@
 <!--[if lt IE 9]>
 <script src=/static/js/html5shiv.js></script>
 <![endif]-->
-<script>
-    requirejs.config({
-        baseUrl: '/widget'
-    });
-</script>
+
 {%- set enginefiles = engines %}
 {%- set pkg = config.package %}
+
+<script>
+
+    requirejs.config({
+        baseUrl: '/widget',
+        map: {
+            "*": {
+                "widget/{{pkg.name}}-{{pkg.version}}":"{{pkg.name}}/{{pkg.version}}/src/{{pkg.name}}",
+                {%- for dep in pkg.dependencies %}
+                "widget/{{loop.key}}-{{dep}}":"{{loop.key}}/{{dep}}/src/{{loop.key}}"
+                {%- endfor %}
+            }
+        },
+        paths:{
+            "{{pkg.name}}/{{pkg.version}}/src/{{pkg.name}}":"{{pkg.name}}/{{pkg.version}}/build/{{pkg.name}}",
+            {%- for dep in pkg.dependencies %}
+            "{{loop.key}}/{{dep}}/src/{{loop.key}}":"{{loop.key}}/{{dep}}/build/{{loop.key}}"
+            {%- endfor %}
+        }
+        });
+</script>
 
 <!--{%- if enginefiles|length %}-->
 
