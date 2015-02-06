@@ -45,14 +45,20 @@ module.exports = function (commander, callback) {
     if (commander.build) {
 
         //处理依赖打包
-        build();
 
+        if(! commander.withoutpre){
+            build();
+        }
         nico.build(commander, callback);
     }
 
     if (commander.server || commander.watch) {
         commander.port = commander.port || 8000;
-        nico.server(build,commander);
+        if(! commander.withoutpre){
+            nico.server(build,commander);
+        }else{
+            nico.server(function(){},commander);
+        }
     }
 
     if (commander.publish) {

@@ -13,6 +13,7 @@ commander
     .option('-f --force', 'force build without cache')
     .option('-v --verbose', 'show more logging')
     .option('-q --quiet', 'show less logging')
+    .option('withoutpre','prebuild js css template')
     .option('init','init a documentation')
     .option('clean', 'clean _site folder')
     .option('build', 'build documentation')
