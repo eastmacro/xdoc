@@ -1,7 +1,7 @@
 {
   "name": "xdoc",
   "description": "一个超级方便的文档生成工具，为互秀而生",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "homepage": "https://github.com/elover/xdoc",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     "spmrc": "*",
     "whoami": "~0.0.3",
     "win-spawn": "~1.1.0",
-    "xnico": "*"
+    "xnico": "0.0.3"
   },
   "bin": {
     "xdoc": "bin/xdoc"
